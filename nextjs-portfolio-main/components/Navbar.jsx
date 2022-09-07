@@ -31,6 +31,7 @@ useEffect(() => {
 }, [router])
 
 
+
  const handleNav = () => {
   setNav(!nav)
  }
@@ -47,38 +48,38 @@ useEffect(() => {
 
   return (
     <div 
-    style={{backgroundColor: `${navBg}`}}
     className={shadow 
-      ? 'fixed w-full h-20 shadow-xl z-[100]'
-      : 'fixed w-full h-20 z-[100]'
-  }
+      ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#7a4f85]'
+      : 'fixed w-full h-20 z-[100] bg-[#7a4f85]'
+  } 
   >
-     <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer'>
-      <Link href='/'>
+     <div className='font-bold flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer'>
+      <Link href='/' >
       <Image 
+      className='m-auto'
       src="/../public/assets/navLogo.png" 
       alt="/" 
-      width='125' 
-      height='50' />
+      width='225' 
+      height='200' />
       </Link>
       <div>
        <ul 
        style={{color: `${linkColor}`}}
        className='hidden md:flex'>
         <Link href='/'>
-         <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
+         <li className='ml-10 text-sm uppercase hover:border-b text-[#01D0DD]'>Home</li>
         </Link>
         <Link href='/#about'>
-         <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
+         <li className='ml-10 text-sm uppercase hover:border-b text-[#01D0DD]'>About</li>
         </Link>
         <Link href='/#skills'>
-         <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
+         <li className='ml-10 text-sm uppercase hover:border-b text-[#01D0DD]'>Skills</li>
         </Link>
         <Link href='/#projects'>
-         <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
+         <li className='ml-10 text-sm uppercase hover:border-b text-[#01D0DD]'>Projects</li>
         </Link>
         <Link href='/#contact'>
-         <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
+         <li className='ml-10 text-sm uppercase hover:border-b text-[#01D0DD]'>Contact</li>
         </Link>
        </ul>
        <div onClick={handleNav} className='md:hidden cursor-pointer'>

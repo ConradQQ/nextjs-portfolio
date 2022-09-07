@@ -3,16 +3,17 @@ import React from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
 const Main = () => {
   return (
     <div id='main' className='w-full h-screen text-center'>
      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
       <div>
-       <p className='uppercase text-sm tracking-widest text-gray-600'>LETS BUILD SOMETHING TOGETHER</p>
-       <h1 className='py-4 text-gray-700'>Hi, I&apos;m <span className='text-[#5651e5]'>Connor</span></h1>
-       <h1 className="py-2 text-gray-700">A Front-End Web Deveolper</h1>
-       <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+       <p className='uppercase text-sm tracking-widest text-[#01D0DD]'>LETS BUILD SOMETHING TOGETHER</p>
+       <h1 className='py-4  text-white'>Hi, I&apos;m <span className=' text-[#01D0DD]'>Connor</span></h1>
+       <h1 className="py-2  text-white">A Front-End Web Deveolper</h1>
+       <p className="py-4  max-w-[70%] m-auto text-white">
         I&apos;m a front-end web deveolper specializing in building (and occasionally desigining) exceptional digital experiences. Currently, I&apos;m focused on building responsive front-end web applicaiton while learning back-end technologies.
        </p>
        {/* Social Links Container */}
@@ -22,7 +23,7 @@ const Main = () => {
               target='_blank'
               rel='noreferrer'
             >
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg  shadow-black bg-[#01D0DD] text-[#7A4F85] p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <FaLinkedinIn />
               </div>
             </a>
@@ -31,24 +32,36 @@ const Main = () => {
               target='_blank'
               rel='noreferrer'
             >
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg  shadow-black bg-[#01D0DD] text-[#7A4F85] p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <FaGithub />
               </div>
             </a>
             
             <Link href='/#contact'>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg  shadow-black bg-[#01D0DD] text-[#7A4F85] p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <AiOutlineMail />
               </div>
             </Link>
             <Link href='/resume'>
-              <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg  shadow-black bg-[#01D0DD] text-[#7A4F85] p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                 <BsFillPersonLinesFill />
               </div>
             </Link>
           </div>
         </div>
       </div>
+      <div className='flex justify-center mt-[-22%] md:mt-[-8%] lg:mt-[-6%] xl:mt-[-5%]'>
+          <Link href='/#about'>
+            <a>
+              <div className='rounded-full shadow-lg p-4 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#01D0DD] animate-bounce'>
+                <HiOutlineChevronDoubleDown
+                  className='text-[#7A4F85]'
+                  size={30}
+                />
+              </div>
+            </a>
+          </Link>
+        </div>
     </div>
   );
 };
