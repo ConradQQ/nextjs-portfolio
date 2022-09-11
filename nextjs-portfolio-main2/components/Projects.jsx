@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import landingPageImg from '../public/assets/projects/tailwind-landing-page.png';
 import reactImg from '../public/assets/projects/react-portfolio.png'
-import netflixImg from '../public/assets/projects/netflix.jpg'
+import conradqqImg from '../public/assets/projects/conradqq.png'
 import twitchImg from '../public/assets/projects/twitch.jpg'
 import ProjectItem from './ProjectItem';
 
@@ -26,14 +26,14 @@ const Projects = () => {
             title='Mock React Portfolio'
             backgroundImg={reactImg}
             projectUrl='/react-portfolio'
-            tech='React JS'
+            tech='ReactJS / Bootstrap5 / Email.js / Leaflet.js'
 
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
-            projectUrl='/netflix'
-            tech='React JS'
+            title='conradqq.io'
+            backgroundImg={conradqqImg}
+            projectUrl='conradqq'
+            tech='NextJS / TailwindCSS / EmailJS'
 
           />
           <ProjectItem

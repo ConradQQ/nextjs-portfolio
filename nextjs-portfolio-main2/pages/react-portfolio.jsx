@@ -19,7 +19,7 @@ const crypto = () => {
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
           <h2 className='py-2'>React Mock Portfolio</h2>
-          <h3>React JS / Bootstrap / Github Pages</h3>
+          <h3>ReactJS / Bootstrap / GH Pages / EmailJS/ LeafletJS</h3>
         </div>
       </div>
 
@@ -56,13 +56,16 @@ const crypto = () => {
                 <RiRadioButtonFill className='pr-1' /> ReactJS
               </p>
               <p className='text-white py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> EmailJS
+              </p>
+              <p className='text-white py-2 flex items-center'>
+                <RiRadioButtonFill className='pr-1' /> LeafletJS
+              </p>
+              <p className='text-white py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> TailwindCSS
               </p>
               <p className='text-white py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Javascript
-              </p>
-              <p className='text-white py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> EmailJS
+                <RiRadioButtonFill className='pr-1' /> Vanilla Javascript
               </p>
               <p className='text-white py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Routes
