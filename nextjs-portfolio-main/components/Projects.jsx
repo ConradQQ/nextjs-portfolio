@@ -3,8 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 import landingPageImg from '../public/assets/projects/tailwind-landing-page.png';
 import reactImg from '../public/assets/projects/react-portfolio.png'
-import netflixImg from '../public/assets/projects/netflix.jpg'
-import twitchImg from '../public/assets/projects/twitch.jpg'
+import conradqqImg from '../public/assets/projects/conradqq.png'
+import quoteImg from '../public/assets/projects/quote-gen.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -20,27 +20,27 @@ const Projects = () => {
             title='Tailwind CSS Landing Page'
             backgroundImg={landingPageImg}
             projectUrl='/landingPage'
-            tech='HTML5 & Tailwind CSS'
+            tech='HTML5 / TailwindCSS'
           />
           <ProjectItem
             title='Mock React Portfolio'
             backgroundImg={reactImg}
             projectUrl='/react-portfolio'
-            tech='React JS'
+            tech='ReactJS / Bootstrap5 / EmailJS / LeafletJS'
 
           />
           <ProjectItem
-            title='Netflix App'
-            backgroundImg={netflixImg}
-            projectUrl='/netflix'
-            tech='React JS'
+            title='conradqq.io'
+            backgroundImg={conradqqImg}
+            projectUrl='conradqq'
+            tech='NextJS / TailwindCSS / EmailJS'
 
           />
           <ProjectItem
-            title='Twitch UI'
-            backgroundImg={twitchImg}
-            projectUrl='/twitch'
-            tech='Next JS'
+            title='Inspirational Quote Generator'
+            backgroundImg={quoteImg}
+            projectUrl='/quote-gen'
+            tech='NextJS / TailwindCSS'
 
           />
         </div>

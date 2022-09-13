@@ -53,10 +53,10 @@ useEffect(() => {
       : 'fixed w-full h-20 z-[100] bg-[#7a4f85]'
   } 
   >
-     <div className='font-bold flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer z-1'>
+     <div className='font-bold flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer'>
       <Link href='/' >
       <Image 
-      className='hover:animate-spin p-10 '
+      className='hover:animate-spin p-10'
       src="/../public/assets/navLogo.png" 
       alt="/" 
       width='225' 

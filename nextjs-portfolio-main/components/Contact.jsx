@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -9,6 +10,20 @@ import ContactImg from '../public/assets/headshot.png'
 
 const Contact = () => {
 
+  // EmailJS Code
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_f1ke6qe', 'template_5u14hlb', form.current, 'AVTOIQBTPlIqKEEmr')
+      .then(() => {
+          alert('Success! I will be in touch within 24 hours.');
+      }, (error) => {
+          alert('Something went wrong... Please try again', error);
+      });
+  };
+  // End EmailJS Code
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -76,6 +91,8 @@ const Contact = () => {
           <div className='col-span-3 w-full h-auto shadow-xl shadow-black rounded-xl lg:p-4'>
             <div className='p-4'>
               <form
+                ref={form}
+                onSubmit={sendEmail}
                 action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
                 method='POST'
                 encType='multipart/form-data'
@@ -86,7 +103,7 @@ const Contact = () => {
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-100 bg-inherit'
                       type='text'
-                      name='name'
+                      name='user_name'
                     />
                   </div>
                   <div className='flex flex-col'>
@@ -96,7 +113,7 @@ const Contact = () => {
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300 bg-inherit'
                       type='text'
-                      name='phone'
+                      name='user_phone'
                     />
                   </div>
                 </div>
@@ -105,7 +122,7 @@ const Contact = () => {
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300 bg-inherit'
                     type='email'
-                    name='email'
+                    name='user_email'
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -124,9 +141,11 @@ const Contact = () => {
                     name='message'
                   ></textarea>
                 </div>
-                <button className='w-full p-4  mt-4 shadow-black bg-[#01D0DD] text-[#7A4F85]'>
-                  Send Message
-                </button>
+                
+                  
+                  <input className='w-full p-4  mt-4 shadow-black bg-[#01D0DD] text-[#7A4F85] cursor-pointer shadow-xl  rounded-xl uppercase bg-gradient-to-r from-[#01D0DD] to-[#709dff] hover:scale-y-110' type="submit" value="SEND MESSAGE" />
+                 
+                
               </form>
             </div>
           </div>

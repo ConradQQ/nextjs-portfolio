@@ -130,7 +130,7 @@ const Skills = () => {
         {/* Tech Image Container */}
         <div className='m-auto'>
          <Image 
-         src='/../public/assets/skills/git.png' 
+         src='/../public/assets/skills/github1.png' 
          alt='/' 
          width='64px' 
          height='64px' 
@@ -138,7 +138,7 @@ const Skills = () => {
         </div>
         {/* Tech Title Container */}
         <div className='flex flex-col items-center justify-center'>
-         <h3>Git</h3>
+         <h3>Github</h3>
         </div>
        </div>
        </div>

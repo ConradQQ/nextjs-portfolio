@@ -1,12 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { HiOutlineChevronDoubleDown } from 'react-icons/hi';
 
 const Main = () => {
+  const [hide, setHide] = useState(false)
+
+  useEffect(() => {
+    const handleHide = () => {
+      if (window.scrollY >= 625) {
+        setHide(true)
+      } else {
+        setHide(false)
+      }
+    }
+    window.addEventListener('scroll', handleHide)
+  }, [])
+
   return (
     <div id='main' className='w-full h-screen text-center relative overflow-hidden'>
      <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
@@ -54,7 +67,9 @@ const Main = () => {
       <div className='flex justify-center mt-[-22%] md:mt-[-8%] lg:mt-[-6%] xl:mt-[-5%]'>
           <Link href='/#about'>
             <a>
-              <div className='rounded-full shadow-lg p-4 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#01D0DD] animate-bounce'>
+              <div className={hide
+                ?'hidden'
+                :'rounded-full shadow-lg p-4 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#01D0DD] animate-bounce'}>
                 <HiOutlineChevronDoubleDown
                   className='text-[#7A4F85]'
                   size={30}
@@ -64,7 +79,7 @@ const Main = () => {
           </Link>
         </div>
         {/* Lower Poptart Container */}
-        <div className='hidden md:block fixed right-[-1%] bottom-[-5%] cursor-pointer hover:animate-spin'>
+        <div className='hidden md:block fixed right-[-1%] bottom-[-5%] cursor-pointer'>
         <Link href='/#contact' >
       <Image 
       className='rotate-[90deg] translate-x-6 translate-y-3'
