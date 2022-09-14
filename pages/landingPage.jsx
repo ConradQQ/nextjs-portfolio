@@ -16,15 +16,15 @@ const property = () => {
           src={landingPageImg}
           alt='/'
         />
-        <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Landing Page</h2>
-          <h3>Tailwind / HTML5</h3>
+        <div className='space-y-5 absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
+          <h2 className='py-2 text-[#01D0DD]'>Landing Page</h2>
+          <h3>TailwindCSS / HTML5</h3>
         </div>
       </div>
 
       <div className='max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 py-8'>
         <div className='col-span-4 space-y-5'>
-          <p>Project</p>
+          <p className='text-xl text-[#01D0DD]'>Project</p>
           <h2>Overview</h2>
           <p>
             Just a basic landing page built with TailwindCSS. Built to demonstrate my ability to deliver professional looking landing pages fit for businesses of any scale.
@@ -46,7 +46,7 @@ const property = () => {
         </div>
         <div className='col-span-4 md:col-span-1 shadow-xl shadow-black rounded-xl py-4'>
           <div className='p-2'>
-            <p className='text-center font-bold pb-2'>Technologies</p>
+            <p className='text-center font-bold pb-2 text-[#01D0DD]'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-white py-2 flex items-center'>
                 <RiRadioButtonFill className='pr-1' /> Tailwind
@@ -59,7 +59,7 @@ const property = () => {
           </div>
         </div>
         <Link href='/#projects'>
-          <p className='underline cursor-pointer'>Back</p>
+          <p className='underline cursor-pointer hover:text-[#01D0DD]'>Back</p>
         </Link>
       </div>
     </div>

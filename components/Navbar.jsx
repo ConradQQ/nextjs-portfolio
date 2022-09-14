@@ -53,11 +53,11 @@ useEffect(() => {
       : 'fixed w-full h-20 z-[100] bg-[#7a4f85]'
   } 
   >
-     <div className='font-bold flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer'>
+     <div className='font-bold flex justify-between items-center w-full h-full px-2 2xl:px-16 cursor-pointer z-1'>
       <Link href='/' >
       <Image 
-      className='hover:animate-spin p-10'
-      src="/../public/assets/navLogo.png" 
+      className='p-10 translate-y-[-30px] md:translate-y-0'
+      src="/../public/assets/poptart.png" 
       alt="/" 
       width='225' 
       height='200' />
@@ -99,7 +99,10 @@ useEffect(() => {
        <div className='flex w-full items-center justify-between'>
         <Link href='/'>
           <Image 
-         src='/../public/assets/navLogo.png' 
+          onClick={() => {
+            setNav(false)
+          }}
+         src='/../public/assets/poptart.png' 
          alt='/' 
          width='87' 
          height='35' 
@@ -107,11 +110,13 @@ useEffect(() => {
          />
          </Link>
          
-        <div onClick={handleNav}  className='rounded-full shadow-lg shadow-black bg-[#01D0DD] p-3 cursor-pointer'>
+        <div onClick={handleNav}  className={nav 
+          ? 'rounded-full shadow-lg shadow-black bg-[#01D0DD] p-3 cursor-pointer'
+          : 'hidden'}>
          <AiOutlineClose />
         </div>
        </div>
-       <div className='border-b border-black my-4 '>
+       <div className='my-4'>
         <p className='w-[85%] md:w-[90%] py-4 text-white'>Lets build something legendary together</p>
        </div>
        <div className='py-4 flex flex-col'>
@@ -154,7 +159,9 @@ useEffect(() => {
           </div>
           </a>
           <Link href='/#contact'>
-          <div className='rounded-full shadow-lg shadow-black p-3 cursor-pointer hover:scale-105 ease-in duration-400 bg-[#01D0DD]'>
+          <div onClick={() => {
+            setNav(false);
+          }} className='rounded-full shadow-lg shadow-black p-3 cursor-pointer hover:scale-105 ease-in duration-400 bg-[#01D0DD]'>
           <AiOutlineMail />
           </div>
           </Link>
