@@ -27,7 +27,7 @@ const netflix = () => {
           <p className='text-[#01D0DD] text-xl'>Project</p>
           <h2>Overview</h2>
           <p>
-            It's this website! This was my first foray into NextJS (Which turns out to be totally awesome).
+            It&apos;s this website! This was my first foray into NextJS (Which turns out to be totally awesome).
           </p>
           <a
             href='https://github.com/ConradQQ/nextjs-portfolio'
